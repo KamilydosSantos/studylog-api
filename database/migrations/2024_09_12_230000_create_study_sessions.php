@@ -21,6 +21,10 @@ return new class extends Migration
             $table->timestamp('posted_at', precision: 0);
             $table->timestamps();
         });
+
+        Schema::table('study_sessions', function (Blueprint $table) {
+            $table->foreign('user_id')->references('id')->on('users');
+        });
     }
 
     /**
