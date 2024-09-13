@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class StudySession extends Model
 {
@@ -14,6 +15,11 @@ class StudySession extends Model
 
     public function user(): BelongsTo
     {
-        return $this->belongsTo(Study::class);
+        return $this->belongsTo(User::class);
+    }
+
+    public function saved_study_sessions(): HasMany
+    {
+        return $this->hasMany(SavedStudySession::class);
     }
 }
