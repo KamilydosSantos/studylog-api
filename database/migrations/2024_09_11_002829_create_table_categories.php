@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('name', length: 50);
-            $table->char('color', length: 6);
+            $table->char('color', length: 7);
             $table->timestamps();
         });
 
