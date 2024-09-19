@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('category_id');
-            $table->dateTime('start_time', precision: 0);
-            $table->dateTime('end_time', precision: 0);
-            $table->time('total_time', precision: 0);
+            $table->dateTime('start_time');
+            $table->dateTime('end_time');
+            $table->time('total_time');
             $table->timestamps();
         });
 

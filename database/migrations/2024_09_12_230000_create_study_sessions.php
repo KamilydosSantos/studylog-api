@@ -18,7 +18,7 @@ return new class extends Migration
             $table->dateTime('study_date');
             $table->time('total_study_time');
             $table->boolean('is_posted');
-            $table->timestamp('posted_at', precision: 0);
+            $table->dateTime('posted_at');
             $table->timestamps();
         });
 
