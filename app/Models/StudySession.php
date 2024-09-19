@@ -18,7 +18,12 @@ class StudySession extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function saved_study_sessions(): HasMany
+    public function study(): HasMany
+    {
+        return $this->hasMany(Study::class);
+    }
+
+    public function saved_study_session(): HasMany
     {
         return $this->hasMany(SavedStudySession::class);
     }
